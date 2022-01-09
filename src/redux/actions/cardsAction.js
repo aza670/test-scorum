@@ -14,6 +14,7 @@ export const fetchCards = () =>{
                 .then(({data}) => {
                             data.cards.map(card => {
                                 if (cardsValue[card.value]) {
+                                    // eslint-disable-next-line no-param-reassign
                                     card.value = cardsValue[card.value]
                                 }
                                 return card
