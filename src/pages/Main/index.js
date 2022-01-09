@@ -5,7 +5,7 @@ import Board from '../../components/Board'
 
 const Main = () => {
   const { cards } = useSelector((s) => s.cards.data)
-  const [balance, setBalance] = useState(100)
+  const [balance, setBalance] = useState(1000)
   const [message, setMessage] = useState('')
   const [isHide, setIsHide] = useState(true)
   const [start, setStart] = useState(false)
@@ -14,7 +14,7 @@ const Main = () => {
 
   const startGame = () => {
     dispatch(fetchCards())
-    setBalance(balance - 10)
+    setBalance(balance - 50)
     setIsHide(true)
     setStart(true)
     setButton(false)
@@ -27,7 +27,7 @@ const Main = () => {
 
     if (+selectedCard === +maxValue) {
       setMessage('You won!')
-      setBalance(balance + 20)
+      setBalance(balance + 100)
     } else {
       setMessage('You loose!')
     }
