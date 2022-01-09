@@ -4,6 +4,7 @@ const initialState = {
     error: false
 }
 
+// eslint-disable-next-line default-param-last
 export const cardsReducer = (state = initialState, action) =>{
     switch (action.type){
         case "FETCH_CARDS":
